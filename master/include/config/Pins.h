@@ -18,8 +18,8 @@ namespace Pins
     constexpr uint8_t Demand2NP = 35;
 
     // Status LED
-    constexpr uint8_t BoilerLED_ON = 18;
-    constexpr uint8_t BoilerLED_OFF = 19;
+    constexpr uint8_t BoilerRunningLED = 18;
+    constexpr uint8_t BoilerIdleLED = 19;
     constexpr uint8_t ErrorLED = 2;
 
     //Buttons
