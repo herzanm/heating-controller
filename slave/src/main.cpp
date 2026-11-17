@@ -1,20 +1,19 @@
 #include <Arduino.h>
 
-// put function declarations here:
-int myFunction(int, int);
+void setup()
+{
+    pinMode(8, OUTPUT);
+    Serial.begin(115200);
+    delay(2000);
 
-void setup() {
-  // put your setup code here, to run once:
-  Serial.begin(115200);
-  int result = myFunction(2, 3);
+    Serial.println("SLAVE START");
 }
 
-void loop() {
-  // put your main code here, to run repeatedly:
-  Serial.println("Hello, slave!");
-}
-
-// put function definitions here:
-int myFunction(int x, int y) {
-  return x + y;
+void loop()
+{
+    Serial.println("SLAVE RUNNING");
+    digitalWrite(8, HIGH);
+    delay(1000);
+    digitalWrite(8, LOW);
+    delay(1000);
 }
